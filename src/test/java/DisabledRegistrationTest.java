@@ -38,6 +38,7 @@ public class DisabledRegistrationTest {
     }
   }
 
+
   @Test
   public void disabledRegistration() {
     driver.get("http://127.0.0.1:7000/");
