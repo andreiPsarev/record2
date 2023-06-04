@@ -1,4 +1,4 @@
-name: Build and Test
+name: Сборка и тестирование
 
 on:
   push:
@@ -13,17 +13,17 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Set up JDK
+      - name: Установка JDK
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
           java-version: 11
 
-      - name: Checkout code
+      - name: Клонирование репозитория
         uses: actions/checkout@v2
 
-      - name: Build with Maven
-        run: mvnw.cmd clean install
+      - name: Сборка с помощью Maven
+        run: mvn clean install
 
-      - name: Run Tests
-        run: mvnw.cmd test
+      - name: Запуск тестов
+        run: mvn test
