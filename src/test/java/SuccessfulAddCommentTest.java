@@ -1,7 +1,7 @@
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import static org.junit.Assert.*;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
@@ -22,7 +22,7 @@ public class SuccessfulAddCommentTest {
 
   @Before
   public void setUp() {
-    String driverPath = "./chromedriver/chromedriver.exe";
+    String driverPath = System.getProperty("user.dir") + "/src/test/chromedriver/chromedriver.exe";
     System.setProperty("webdriver.chrome.driver", driverPath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");

@@ -1,7 +1,7 @@
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import static org.junit.Assert.*;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
@@ -9,10 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.*;
 
 public class SuccessfulRegistrationTest {
@@ -22,7 +20,7 @@ public class SuccessfulRegistrationTest {
 
   @Before
   public void setUp() {
-    String driverPath = "./chromedriver/chromedriver.exe";
+    String driverPath = System.getProperty("user.dir") + "/src/test/chromedriver/chromedriver.exe";
     System.setProperty("webdriver.chrome.driver", driverPath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
