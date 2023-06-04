@@ -31,6 +31,7 @@ public class DisabledRegistrationTest {
     vars = new HashMap<String, Object>();
   }
 
+
   @After
   public void tearDown() {
     if (driver != null) {
